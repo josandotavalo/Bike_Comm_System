@@ -98,26 +98,24 @@ sudo systemctl restart bluetooth
 ## Configuración del nodo OLSR
 1. Instalación del protocolo
 ```
-sudo apt-get install olsrd -y
-sudo apt-get install --reinstall bison libbison-dev flex libfl-dev
-cd ~/olsrd-0.6.8
-make clean
-make
+cd olsrd_0.9.0.3
+sudo make clean
+sudo make
 sudo make install
 ```
 
 2. Uso del repositorio
 ```
-sudo cp /etc/olsrd/olsrd.conf /etc/olsrd/olsrd.conf.copia
 sudo cp MANET-bike/olsr_scripts/olsrd.conf /etc/olsrd/olsrd.conf
 sudo chmod +x MANET-bike/olsr_scripts/olsr_server.sh 
 ```
 
+3. Para cualquier modificación del protocolo se debe acceder al directorio **olsrd_0.9.0.3/src** y recompilar
+
 ## Configuración del nodo BATMAN
 1. Instalación del protocolo
 ```
-sudo apt install libnl-3-dev libnl-genl-3-dev
-git clone https://git.open-mesh.org/batctl.git
+sudo apt-get install libnl-3-dev libnl-genl-3-dev
 cd batctl
 sudo make install
 ```
@@ -138,8 +136,11 @@ sudo chmod +x MANET-bike/batman_scripts/batman_server.sh
 ```
 
 5. Ejecutar el script al bootear la RPi, para esto se debe añadir la ruta 
-```/home/pi/MANET-bike/batman_scripts/batman_server.sh & ```
-a la ruta /etc/rc.local
+```
+/home/pi/MANET-bike/batman_scripts/batman_server.sh & 
+```
+
+a la ruta **/etc/rc.local**
 
 ## Configuración del nodo Servidor
 1. Copiar el archivo dhcpcd.conf en la dirección /etc
