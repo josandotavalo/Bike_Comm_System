@@ -4,7 +4,7 @@ Archivos de configuración para los nodos de la MANET
 ## Instalación y configuración del OS
 1. Descargar la imagen de [Raspberry Pi OS Lite (Legacy)](https://www.raspberrypi.com/software/operating-systems/) desde la página oficial
 
-2. Instalar este rapbian en la tarjeta Micro SD mediante el [Raspberry Pi Imager](https://www.raspberrypi.com/software/)
+2. Instalar este Raspbian en la tarjeta Micro SD mediante el [Raspberry Pi Imager](https://www.raspberrypi.com/software/)
 
 3. Usuario: pi / Contraseña: raspberry
 
@@ -57,10 +57,11 @@ sudo apt-get install git -y
 git clone https://github.com/josandotavalo/MANET-bike.git
 ```
 
-5. PIP - PYBLUEZ
+5. PIP - PYBLUEZ - INA219
 ```
 sudo apt-get install python3-pip -y
 sudo pip3 install pybluez
+sudo pip3 install adafruit-circuitpython-ina219
 ```
 
 6. FFMPEG
@@ -75,18 +76,19 @@ sudo apt-get install iperf3 -y
 
 8. NTP
 ```
-sudo apt-get install ntp
+sudo apt-get install ntp -y
 ```
 
 ## Configuración Bluetooth
-1. Modificar el archivo
+1. Copiar el archivo **bus-org.bluez.service** 
 ```
-/etc/systemd/system/dbus-org.bluez.service
+sudo cp bus-org.bluez.service /etc/systemd/system/dbus-org.bluez.service
 ```
-con la siguiente línea
+en este archivo se ha modificado la siguiennte línea al añadir la opción -C
 ```
 ExecStart=/usr/lib/bluetooth/bluetoothd -C
 ```
+
 2. Añadir el Serial Port Profile con el comando:
 ```
 sudo sdptool add SP
