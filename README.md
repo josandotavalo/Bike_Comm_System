@@ -163,3 +163,18 @@ sudo cp dhcpcd.conf /etc/dhcpcd.conf
 ```
 sudo systemctl start dhcpcd 
 ```
+## Configuración de la sincronización de los nodos (NTP)
+1. Copiar el archivo **hosts** en todos los nodos
+```
+sudo cp hosts /etc/hosts
+```
+
+2. Para el nodo servidor:
+```
+sudo cp ntp.conf.server /etc/ntp.conf
+```
+
+3. Para los nodos de la MANET:
+```
+sudo cp ntp.conf /etc/ntp.conf
+```
