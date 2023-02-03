@@ -154,7 +154,7 @@ sudo chmod +x MANET-bike/batman_scripts/batman_server.sh
 a la ruta **/etc/rc.local**
 
 ## Configuración del nodo Servidor
-1. Copiar el archivo dhcpcd.conf en la dirección /etc
+1. Para la conexión ethernet de la RPi servidor con el PC
 ```
 sudo cp dhcpcd.conf /etc/dhcpcd.conf 
 ```
