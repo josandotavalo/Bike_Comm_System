@@ -112,6 +112,17 @@ sudo chmod +x MANET-bike/olsr_scripts/olsr_server.sh
 
 3. Para cualquier modificación del protocolo se debe acceder al directorio **olsrd_0.9.0.3/src** y recompilar
 
+4. En caso del error:
+```
+[BISON] src/cfgparser/oparse.c
+/bin/sh: 1: bison: not found
+make: *** [src/cfgparser/oparse.c] Error 127
+```
+instalar las siguientes librerías:
+```
+sudo apt-get install --reinstall bison libbison-dev flex libfl-dev
+```
+
 ## Configuración del nodo BATMAN
 1. Instalación del protocolo
 ```
