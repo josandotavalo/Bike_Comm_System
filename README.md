@@ -84,7 +84,7 @@ sudo apt-get install ntp -y
 ```
 sudo cp dbus-org.bluez.service /etc/systemd/system/dbus-org.bluez.service
 ```
-en este archivo se ha modificado la siguiennte línea al añadir la opción -C
+en este archivo se ha modificado la siguiente línea al añadir la opción -C
 ```
 ExecStart=/usr/lib/bluetooth/bluetoothd -C
 ```
