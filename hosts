@@ -3,14 +3,14 @@
 ff02::1		ip6-allnodes
 ff02::2		ip6-allrouters
 
-127.0.1.1	loalhost
+127.0.1.1	localhost
 10.0.0.1	NTP-server
-10.0.0.11	batman-node1
-10.0.0.12	batman-node2
-10.0.0.13	batman-node3
-10.0.0.14	batman-node4
+10.0.0.11	node1
+10.0.0.12	node2
+10.0.0.13	node3
+10.0.0.14	node4
 20.0.0.1	NTP-server
-20.0.0.11	olsr-node1
-20.0.0.12	olsr-node2
-20.0.0.13	olsr-node3
-20.0.0.14	olsr-node4
+20.0.0.11	node1
+20.0.0.12	node2
+20.0.0.13	node3
+20.0.0.14	node4
