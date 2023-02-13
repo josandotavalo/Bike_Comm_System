@@ -99,7 +99,7 @@ sudo systemctl restart bluetooth
 1. Instalación del protocolo
 ```
 sudo git clone https://github.com/OLSR/olsrd.git
-cd olsrd
+cd ./olsrd
 sudo make clean
 sudo make
 sudo make install
@@ -107,11 +107,12 @@ sudo make install
 
 2. Uso del script olsr
 ```
-sudo cp ./olsr_scripts/olsrd.conf /etc/olsrd/olsrd.conf
-sudo chmod +x MANET-bike/olsr_scripts/olsr_server.sh 
+cd ../olsr_scripts
+sudo /olsrd.conf /etc/olsrd/olsrd.conf
+sudo chmod +x olsr_server.sh 
 ```
 
-3. Para cualquier modificación del protocolo se debe acceder al directorio **olsrd_0.9.0.3/src** y recompilar
+3. Para cualquier modificación del protocolo se debe acceder al directorio **olsrd/src** y recompilar
 
 4. En caso del error:
 ```
