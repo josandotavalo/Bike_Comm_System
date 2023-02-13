@@ -130,7 +130,7 @@ sudo apt-get install --reinstall bison libbison-dev flex libfl-dev -y
 ```
 sudo apt-get install libnl-3-dev libnl-genl-3-dev
 sudo git clone https://git.open-mesh.org/batctl.git
-cd batctl
+cd ./batctl
 sudo make install
 ```
 
