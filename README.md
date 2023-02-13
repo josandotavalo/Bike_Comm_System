@@ -104,9 +104,9 @@ sudo make
 sudo make install
 ```
 
-2. Uso del repositorio
+2. Uso del script olsr
 ```
-sudo cp MANET-bike/olsr_scripts/olsrd.conf /etc/olsrd/olsrd.conf
+sudo cp Bike_Comm_System/olsr_scripts/olsrd.conf /etc/olsrd/olsrd.conf
 sudo chmod +x MANET-bike/olsr_scripts/olsr_server.sh 
 ```
 
