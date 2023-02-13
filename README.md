@@ -98,7 +98,7 @@ sudo systemctl restart bluetooth
 ## Configuración del nodo OLSR
 1. Instalación del protocolo
 ```
-cd olsrd_0.9.0.3
+sudo git clone https://github.com/OLSR/olsrd.git
 sudo make clean
 sudo make
 sudo make install
