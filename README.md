@@ -54,7 +54,7 @@ sudo apt-get install git -y
 
 4. Clonación del repositorio propio
 ```
-git clone https://github.com/josandotavalo/MANET-bike.git
+sudo git clone https://github.com/josandotavalo/Bike_Comm_System.git
 ```
 
 5. PIP - PYBLUEZ - INA219
