@@ -99,6 +99,7 @@ sudo systemctl restart bluetooth
 1. Instalación del protocolo
 ```
 sudo git clone https://github.com/OLSR/olsrd.git
+cd olsrd
 sudo make clean
 sudo make
 sudo make install
