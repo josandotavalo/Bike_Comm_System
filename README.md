@@ -80,9 +80,9 @@ sudo apt-get install ntp -y
 ```
 
 ## Configuración Bluetooth
-1. Copiar el archivo **bus-org.bluez.service** 
+1. Copiar el archivo **dbus-org.bluez.service** 
 ```
-sudo cp bus-org.bluez.service /etc/systemd/system/dbus-org.bluez.service
+sudo cp dbus-org.bluez.service /etc/systemd/system/dbus-org.bluez.service
 ```
 en este archivo se ha modificado la siguiennte línea al añadir la opción -C
 ```
