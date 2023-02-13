@@ -146,12 +146,13 @@ echo 'denyinterfaces wlan0' | sudo tee --append /etc/dhcpcd.conf
 
 4. Permisos de ejecución
 ```
-sudo chmod +x MANET-bike/batman_scripts/batman_server.sh 
+cd ../batman_scripts
+sudo chmod +x batman_server.sh 
 ```
 
 5. Ejecutar el script al bootear la RPi, para esto se debe añadir la ruta 
 ```
-/home/pi/MANET-bike/batman_scripts/batman_server.sh & 
+/home/pi/Bike_Comm_System/batman_scripts/batman_server.sh & 
 ```
 
 a la ruta **/etc/rc.local**
