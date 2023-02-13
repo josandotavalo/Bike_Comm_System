@@ -120,7 +120,7 @@ make: *** [src/cfgparser/oparse.c] Error 127
 ```
 instalar las siguientes librerías:
 ```
-sudo apt-get install --reinstall bison libbison-dev flex libfl-dev
+sudo apt-get install --reinstall bison libbison-dev flex libfl-dev -y
 ```
 
 ## Configuración del nodo BATMAN
