@@ -26,7 +26,9 @@ sudo raspi-config
   - Wireless LAN: Country EC / SSID Nombre de la red / Passphrase Clave de la red
   - Boot / Auto Login: Console Autologin
   
-- Interface options: SSH
+- Interface options:
+  - SSH
+  - I2C
 
 - Localisation Options
   - Locale: es_EC.UTF-8 UTF-8
@@ -62,6 +64,13 @@ sudo git clone https://github.com/josandotavalo/Bike_Comm_System.git
 sudo apt-get install python3-pip -y
 sudo pip3 install pybluez
 sudo pip3 install adafruit-circuitpython-ina219
+sudo pip3 install pi-ina219
+sudo apt-get install i2c-tools -y
+```
+
+Para comprobar que la conexión I2C está correcta:
+```
+sudo i2cdetect -y -1
 ```
 
 6. FFMPEG
