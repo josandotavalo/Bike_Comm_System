@@ -109,7 +109,7 @@ sudo systemctl restart bluetooth
 1. Instalación del protocolo
 ```
 sudo mount /dev/sda1 /mnt
-sudo cp /mnt/olsrd-0.9.0.3 /home/pi/Bike_Comm_System
+sudo cp -r /mnt/olsrd-0.9.0.3 /home/pi/Bike_Comm_System
 cd olsrd-0.9.0.3
 sudo make clean
 sudo make
