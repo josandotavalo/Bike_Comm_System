@@ -152,7 +152,7 @@ echo 'batman-adv' | sudo tee --append /etc/modules
 
 3. Stop the DHCP process from trying to manage the wireless lan interface by issuing the following command :
 ```
-echo 'denyinterfaces wlan0' | sudo tee --append /etc/dhcpcd.conf
+echo 'denyinterfaces wlan1' | sudo tee --append /etc/dhcpcd.conf
 ```
 
 4. Permisos de ejecución
