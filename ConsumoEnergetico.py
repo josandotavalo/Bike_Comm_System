@@ -38,7 +38,7 @@ fc= open("/MeasuresNodoX/EnergyConsumptionX.txt", "w") # Escritura del consumo
 fc.write(" %.3f " % ec) # de energía en un fichero
 fc.close()
 while (sampling == 1): # Muestreo 
-    currentlist.append(ina.getCurrent_mA())
+    currentlist.append(ina.current)
     if datetime.now() > starttest + timedelta(seconds=interval):
         ec=ec+(currentlist[indice]/M)*100/ic # Cálculo del consumo (%)
         fc= open("MeasuresNodoX/EnergyConsumptionX.txt", "w") 
@@ -54,4 +54,4 @@ while (sampling == 1): # Muestreo
         sampling=0
     indice=indice+1
     sleep(st) # Intervalo de muestreo
-os.system('halt') # Desactivación del nodo
+#os.system('halt') # Desactivación del nodo
