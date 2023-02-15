@@ -34,19 +34,19 @@ M=3600/st # Número muestras a capturar en una hora
 sampling=1 # Flag de activación/desactivación para la captura de muestras
 starttest = datetime.now() #Tiempo de inicio de un experimento
 endtest = starttest + timedelta(minutes) # Duración del experimento
-fc= open("/MeasuresNodoX/EnergyConsumptionX.txt", "w") # Escritura del consumo
+fc= open("EnergyConsumptionX.txt", "w") # Escritura del consumo
 fc.write(" %.3f " % ec) # de energía en un fichero
 fc.close()
 while (sampling == 1): # Muestreo 
     currentlist.append(ina.current)
     if datetime.now() > starttest + timedelta(seconds=interval):
         ec=ec+(currentlist[indice]/M)*100/ic # Cálculo del consumo (%)
-        fc= open("MeasuresNodoX/EnergyConsumptionX.txt", "w") 
+        fc= open("EnergyConsumptionX.txt", "w") 
         fc.write(" %.3f " % ec) # Actualización del consumo
         fc.close()
         interval = interval+2 # Próximo intervalo de actualización
     if datetime.now() > endtest: # Escritura del conjunto de muestras
-        fm= open("MeasuresNodoX/CurrentSamplesNodoX.txt", "w")
+        fm= open("CurrentSamplesNodoX.txt", "w")
         for sample in currentlist:
             fm.write(str(sample))
             fm.write("\n")
