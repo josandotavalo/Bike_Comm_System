@@ -119,7 +119,7 @@ sudo make install
 2. Uso del script olsr
 ```
 cd ../olsr_scripts
-sudo /olsrd.conf /etc/olsrd/olsrd.conf
+sudo cp /olsrd.conf /etc/olsrd/olsrd.conf
 sudo chmod +x olsr_server.sh 
 ```
 
