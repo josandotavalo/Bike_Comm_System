@@ -193,3 +193,8 @@ sudo cp ntp.conf.server /etc/ntp.conf
 ```
 sudo cp ntp.conf /etc/ntp.conf
 ```
+
+4. Reiniciar el servicio NTP
+```
+sudo systemctl restart ntp
+```
