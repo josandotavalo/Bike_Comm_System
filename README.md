@@ -139,7 +139,7 @@ sudo apt-get install --reinstall bison libbison-dev flex libfl-dev -y
 ## Configuración del nodo BATMAN
 1. Instalación del protocolo
 ```
-sudo apt-get install libnl-3-dev libnl-genl-3-dev
+sudo apt-get install libnl-3-dev libnl-genl-3-dev -y
 sudo git clone https://git.open-mesh.org/batctl.git
 cd batctl
 sudo make install
