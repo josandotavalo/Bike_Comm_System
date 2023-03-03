@@ -3,7 +3,7 @@
 ff02::1		ip6-allnodes
 ff02::2		ip6-allrouters
 
-127.0.1.1	localhost
+127.0.0.1	node1
 10.0.0.1	NTP-server
 10.0.0.11	node1
 10.0.0.12	node2
