@@ -54,7 +54,7 @@ restrict source notrap nomodify noquery
 # (Again, the address is an example only.)
 #broadcast 20.0.0.255
 server 127.127.1.0
-fudge 127.127.1.0 time 1 stratum 10
+fudge 127.127.1.0 time1 1 stratum 10
 
 # If you want to listen to time broadcasts on your local subnet, de-comment the
 # next lines.  Please do this only if you trust everybody on the network!
