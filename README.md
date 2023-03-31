@@ -2,7 +2,7 @@
 Archivos de configuración para los nodos de la MANET
 
 ## Instalación y configuración del OS
-1. Descargar la imagen de [Raspberry Pi OS Lite (Legacy)](https://www.raspberrypi.com/software/operating-systems/) desde la página oficial
+1. Descargar la imagen de [Raspberry Pi OS Lite Debian 10 Buster (Legacy)](https://www.raspberrypi.com/software/operating-systems/) desde la página oficial
 
 2. Instalar este Raspbian en la tarjeta Micro SD mediante el [Raspberry Pi Imager](https://www.raspberrypi.com/software/)
 
