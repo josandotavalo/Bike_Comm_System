@@ -194,8 +194,13 @@ sudo cp ntp.conf.server /etc/ntp.conf
 ```
 sudo cp ntp.conf /etc/ntp.conf
 ```
+4. Correr los scripts **ntp_configura.sh** para el servidor y nodos
+```
+sudo chmod +x ntp_configura.sh
+sudo ./ntp_configura.sh
+```
 
-4. Reiniciar el servicio NTP
+5. Reiniciar el servicio NTP
 ```
 sudo systemctl restart ntp
 ```
