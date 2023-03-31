@@ -86,6 +86,7 @@ sudo apt-get install iperf3 -y
 8. NTP
 ```
 sudo apt-get install ntp -y
+sudo apt-get install ntpdate -y
 ```
 
 ## Configuración Bluetooth
