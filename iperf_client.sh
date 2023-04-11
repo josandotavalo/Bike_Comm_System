@@ -16,7 +16,7 @@ do
     sudo tcpdump -U -i wlan1 -vvv -w ./dist_"$1"/"$1"_"$counter".pcap &
     sleep 1s
 
-    sudo iperf3 -c 10.0.0.11 -u -t 10 -b 200K -J > ./dist_"$1"/"$1"_"$counter".json
+    sudo iperf3 -c $2 -u -t 10 -b 200K -J > ./dist_"$1"/"$1"_"$counter".json
     sleep 1s
 
     pid=$(ps -e | pgrep tcpdump)
