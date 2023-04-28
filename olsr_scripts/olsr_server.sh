@@ -13,7 +13,7 @@ sudo iwconfig wlan1 channel 2
 sudo ip link set wlan1 up
 sudo iwconfig wlan1 txpower 0dBm
 
-sudo ifconfig wlan1 20.0.0.1/24
+sudo ifconfig wlan1 10.0.0.1/24
 
 # OLSRd
 sudo olsrd -i wlan1
