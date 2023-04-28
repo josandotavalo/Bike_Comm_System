@@ -11,8 +11,8 @@ sudo iwconfig wlan1 mode ad-hoc
 sudo iwconfig wlan1 essid "batman_network"
 sudo iwconfig wlan1 ap any
 sudo iwconfig wlan1 channel 2
-sudo iwconfig wlan1 txpower 0
 sudo ip link set wlan1 up
+sudo iwconfig wlan1 txpower 0dBm
 
 # BATMAN-adv
 sudo modprobe batman-adv
