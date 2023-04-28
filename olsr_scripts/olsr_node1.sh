@@ -11,7 +11,7 @@ sudo iwconfig wlan1 essid "olsr_network"
 sudo iwconfig wlan1 ap any
 sudo iwconfig wlan1 channel 2
 sudo ip link set wlan1 up
-sudo iwconfig wlan1 txpower 0dBm
+sudo iwconfig wlan1 txpower 20dBm
 
 sudo ifconfig wlan1 10.0.0.21/24
 
