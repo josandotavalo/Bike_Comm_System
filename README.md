@@ -164,7 +164,7 @@ cd ../batman_scripts
 sudo chmod +x batman_server.sh 
 ```
 
-5. Ejecutar el script al bootear la RPi, para esto se debe añadir la ruta 
+5. Ejecutar el script al bootear la RPi, para esto se debe añadir el comando a la ruta /etc/rc.local
 ```
 /home/pi/Bike_Comm_System/batman_scripts/batman_server.sh & 
 ```
