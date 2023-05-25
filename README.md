@@ -109,6 +109,7 @@ sudo systemctl restart bluetooth
 ## Configuración del nodo OLSR
 1. Instalación del protocolo
 ```
+sudo wget: http://www.olsr.org/releases/0.9/olsrd‐0.9.0.3.tar.bz2
 sudo mount /dev/sda1 /mnt
 sudo cp -r /mnt/olsrd-0.9.0.3 /home/pi/Bike_Comm_System
 cd olsrd-0.9.0.3
