@@ -206,3 +206,17 @@ sudo ./ntp_configura.sh
 ```
 sudo systemctl restart ntp
 ```
+
+## Instalacion de NodeJS
+1. Repositorio de LTS release
+```
+curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
+```
+2. Instalacion
+```
+sudo apt install nodejs
+```
+3. Comprobacion
+```
+node -v
+```
