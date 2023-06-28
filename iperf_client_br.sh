@@ -1,38 +1,51 @@
 #!/bin/bash
 
-if [ ! -d "./bitrate_"$1"" ] 
+if [ ! -d "./dist_"$1"" ] 
 then
-    sudo mkdir bitrate_"$1"
+    sudo mkdir dist_"$1"
     echo "========= DIRECTORIO CREADO ========="
 fi
 
-counter=1
-sleep 1s
+counter=$3
+brlast=$4
+braux=$7
+procentaje=$5
 
-while [ $counter -lt 11 ]
+while [ $counter -lt $6 ]
 do
     echo "========= EXPERIMENTO "$counter" a "$1" ========="
 
-    sudo tcpdump -U -i wlan1 -vvv -w ./bitrate_"$1"/"$1"_"$counter".pcap &
+    sudo tcpdump -U -i wlan1 -vvv -w ./dist_"$1"/"$1"_"$counter".pcap &> result.txt &
     sleep 1s
 
-    sudo iperf3 -c $2 -u -t 10 -b $1 -J > ./bitrate_"$1"/"$1"_"$counter".json
+    sudo iperf3 -c $2 -u -t 10 -J -b "$counter"K > ./dist_"$1"/"$1"_"$counter".json
+    br=$(cat ./dist_"$1"/"$1"_"$counter".json | jq -r '.end.sum.bytes')
+    echo "bytes: "$br""
+    echo "byteslast: "$brlast""
     sleep 1s
 
     pid=$(ps -e | pgrep tcpdump)
-    echo "========= PID: "$pid" ========="
+    #echo "========= PID: "$pid" ========="
     sleep 2s
     kill -2 $pid
 
-    error_count=$(cat ./bitrate_"$1"/"$1"_"$counter".json | grep error | wc -l)
+    error_count=$(cat ./dist_"$1"/"$1"_"$counter".json | grep error | wc -l)
+    if (( $brlast > $br ))
+    then
+        error_count=1
+        brlast=$(echo "scale=0; $braux * $5" | bc -l | xargs printf "%.0f")
+    fi
     if [ $error_count -eq 0 ]
     then
-        echo "========= EXP "$counter" TERMINADO ========="
-        counter=`expr $counter + 1`
+        #echo "========= EXP "$counter" TERMINADO ========="
+        counter=`expr $counter + 100`
+        brlast=$br
+        braux=$br
     else
         echo "========= EXP "$counter" CON ERRORES SE REPITE ========="
     fi
     sleep 1s
+    sudo rm ./result.txt
 done
 
 echo "========= EXPERIMENTOS COMPLETADOS ========="
